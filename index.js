@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-
 const port = process.env.PORT || 5000;
 
 const categories = require("./data/categories.json");
@@ -36,7 +35,6 @@ app.get("/categories/:id", (req, res) => {
     res.send(categoryNews);
   }
 });
-
 app.listen(port, () => {
   console.log(`Dragon API is running on port: ${port}`);
 });
